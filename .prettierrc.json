@@ -1,0 +1,7 @@
+{
+  "semi": true, 
+  "tabWidth": 2,
+  "singleQuite": true, 
+  "printWidth": 80, 
+  "tralingComma": "all"
+}
