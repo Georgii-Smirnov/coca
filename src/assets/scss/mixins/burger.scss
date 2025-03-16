@@ -12,7 +12,7 @@
   color: var(--neutral-color-140);
   background-color: transparent;
 
-  @include media.small-tablet {
+  @include small-tablet {
     display: block;
   }
 
