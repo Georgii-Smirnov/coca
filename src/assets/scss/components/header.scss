@@ -81,7 +81,7 @@
       border-radius: 50%;
       width: 23px;
       height: 23px;
-      background-color: var(--neurtal-color-120);
+      background-color: var(--neutral-color-120);
       transition:
         left var(--transition),
         background-color var(--transition);
@@ -96,6 +96,11 @@
       text-align: center;
       color: var(--neutral-color-140);
       transform: translateX(-50%);
+
+      @include small-tablet {
+        top: -28px;
+        font-size: 20px;
+      }
     }
 
     &-checkbox {
@@ -136,6 +141,7 @@
     color: var(--neurtal-color-140);
 
     @include small-tablet {
+      font-size: 20px;
       line-height: 300%;
     }
 
