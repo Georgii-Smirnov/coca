@@ -1,7 +1,7 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import prettierPlugin from 'eslint-plugin-prettier';
-import eslintConfigPrettier from 'eslint-config-prettier';
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import prettierPlugin from "eslint-plugin-prettier";
+import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   {
@@ -11,12 +11,12 @@ export default [
         ...globals.es2021,
       },
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ecmaVersion: "latest",
+        sourceType: "module",
       },
     },
     rules: {
-      'prettier/prettier': 'error',
+      "prettier/prettier": "error",
     },
   },
   pluginJs.configs.recommended,
@@ -29,17 +29,17 @@ export default [
     },
   },
   {
-    files: ['.eslintrc.{js,cjs}'],
+    files: [".eslintrc.{js,cjs}"],
     languageOptions: {
       globals: {
         ...globals.node,
       },
       parserOptions: {
-        sourceType: 'script',
+        sourceType: "script",
       },
     },
   },
   {
-    ignores: ['node_modules', 'dist'],
+    ignores: ["node_modules", "dist"],
   },
 ];

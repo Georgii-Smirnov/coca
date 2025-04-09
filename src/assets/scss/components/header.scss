@@ -2,12 +2,11 @@
   padding: 26px 0 22px;
 
   @include mobile {
-    padding: 22px 0 18px; 
+    padding: 22px 0 18px;
   }
 
   &__container {
     @include flex-all-between;
-    
   }
 
   &__logo {

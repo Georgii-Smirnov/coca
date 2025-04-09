@@ -5,11 +5,11 @@ export const useTheme = () => {
   const themeTargetDataset = themeTarget.dataset;
 
   const theme = localStorage.getItem("theme") || "light";
-  themeTargetDataset.theme = theme; 
+  themeTargetDataset.theme = theme;
 
-  if (theme === 'dark') {
-    themeSwitcher.checked = true; 
-  } 
+  if (theme === "dark") {
+    themeSwitcher.checked = true;
+  }
 
   themeSwitcher.addEventListener("click", () => {
     if (themeTargetDataset.theme === "light") {
@@ -21,7 +21,3 @@ export const useTheme = () => {
     }
   });
 };
-
-
-
-

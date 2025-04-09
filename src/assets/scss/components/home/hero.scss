@@ -84,7 +84,7 @@
   }
 
   &__left {
-    @include mini-desktop{
+    @include mini-desktop {
       max-width: 617px;
     }
   }
