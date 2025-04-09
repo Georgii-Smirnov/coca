@@ -7,7 +7,7 @@
   }
 
   @include mobile {
-    min-height: calc(100dvh - 128px);
+    min-height: calc(100dvh - 109px);
   }
 
   &::before {
@@ -64,7 +64,6 @@
   &__container {
     @include flex-justify-between;
     gap: 15px;
-    flex-wrap: wrap;
     align-items: flex-end;
 
     @include mini-desktop {
@@ -75,16 +74,18 @@
     }
   }
 
-  &__left {
-    max-width: 570px;
-  }
-
   &__right {
     position: relative;
     margin-right: 20px;
 
     @include mini-desktop {
       display: none;
+    }
+  }
+
+  &__left {
+    @include mini-desktop{
+      max-width: 617px;
     }
   }
 
@@ -105,12 +106,12 @@
       font-size: 60px;
     }
 
-    @include mobile{
+    @include mobile {
       margin-bottom: 38px;
       font-size: 48px;
     }
 
-    @include small-mobile{
+    @include small-mobile {
       margin-bottom: 30px;
       font-size: 42px;
     }
@@ -118,6 +119,12 @@
 
   &__subtitle {
     margin-bottom: 69px;
+
+    & br {
+      @include mini-desktop {
+        display: none;
+      }
+    }
   }
 
   &__form {
@@ -240,10 +247,11 @@
     }
 
     &-body {
-      &-th {
+      &-td {
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
+        white-space: nowrap;
         color: #fff;
 
         &:nth-child(1) {

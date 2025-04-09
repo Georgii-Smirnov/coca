@@ -29,6 +29,7 @@
     @include small-mobile {
       font-size: 30px;
     }
+
   }
 
   &-h3 {
@@ -69,6 +70,7 @@
     @include small-mobile {
       font-size: 22px;
     }
+
   }
 
   &-h1,
@@ -113,7 +115,7 @@
         width: 76px;
         height: 1px;
         background-color: var(--neutral-color-100);
-        transform: translateY(-20px);
+        transform: translateY(-43px);
 
         @include mini-desktop {
           display: none;
