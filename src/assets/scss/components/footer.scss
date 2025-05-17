@@ -149,24 +149,35 @@
       line-height: 150%;
 
       @include mobile {
-        &::before {
-          content: "▼";
+        &::before,
+        &::after {
+          content: "";
           position: absolute;
           top: 50%;
-          right: 6%;
-          font-size: 15px;
-          transform: translateY(-45%);
-          transition: transform var(--transition);
+          right: 5%;
+          display: inline-block;
+          border-radius: 4px;
+          width: 18px;
+          height: 4px;
+          background-color: #fff;
         }
 
-        &.is-open::before {
-          content: "-";
+        &::after {
+          transform: rotate(90deg);
+          transition: var(--transition);
         }
         margin-bottom: 10px;
         border-radius: 10px;
         padding: 10px;
         font-size: 18px;
         background-color: var(--neutral-color-150);
+      }
+    } 
+              
+    @include mobile {
+      &.is-open &-title::after {
+        content: "";
+        transform: rotate(0);
       }
     }
 

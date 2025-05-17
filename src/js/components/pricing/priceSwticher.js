@@ -7,16 +7,16 @@ export const usePriceSwitcher = () => {
 
   const priceList = {
     starter: {
-      default: 120,
-      witchSale: 100,
+      default: "$" + 120,
+      witchSale: "$" + 100,
     },
     popular: {
-      default: 1680,
-      witchSale: 1400,
+      default: "$" + 1680,
+      witchSale: "$" + 1400,
     },
     enterprise: {
-      default: 2520,
-      witchSale: 2100,
+      default: "$" + 2520,
+      witchSale: "$" + 2100,
     },
   };
 
@@ -33,7 +33,6 @@ export const usePriceSwitcher = () => {
   };
 
   switcher.checked = true;
-  setPricesWitchSale();
 
   switcher.addEventListener("click", () => {
     if (switcher.checked) {
