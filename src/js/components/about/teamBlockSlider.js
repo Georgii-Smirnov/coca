@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import "swiper/css";
 export const useTeamBlockSlider = () => {
   new Swiper(".team-block__slider", {
-    slidesPerView: "3",
+    slidesPerView: "auto",
     spaceBetween: 32,
     loop: true,
     autoplay: {
