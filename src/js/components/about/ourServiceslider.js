@@ -1,7 +1,7 @@
 import Swiper from "swiper";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-export const useAboutSlider = () => {
+export const useOurServiceSlider = () => {
   new Swiper(".our-service__slider", {
     modules: [Autoplay],
     slidesPerView: "2.56",
