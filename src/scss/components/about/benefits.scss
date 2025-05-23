@@ -1,0 +1,56 @@
+.benefits {
+  &__content {
+    @include flex-all-between;
+    border-top: 1px solid var(--neutral-color-30);
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding: 80px 0;
+
+    @include tablet {
+      gap: 54px;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-title {
+      max-width: 480px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+
+      @include tablet {
+        max-width: inherit;
+      }
+    }
+
+    &-text {
+      max-width: 533px;
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+
+      @include mini-desktop {
+        max-width: 415px;
+      }
+
+      @include tablet {
+        max-width: 730px;
+      }
+    }
+  }
+}
+
+.hero-decor {
+  &::before {
+    top: -130%;
+  }
+
+  &::after {
+    top: 98%;
+  }
+}

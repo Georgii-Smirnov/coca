@@ -1,0 +1,107 @@
+.team-block {
+  padding: 160px 0;
+
+  &__head {
+    @include mobile {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    margin-bottom: 80px;
+
+    &-title {
+      @include mobile {
+        margin-bottom: 33px;
+      }
+      margin-bottom: 24px;
+      max-width: 800px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      max-width: 500px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+  }
+
+  &__slider {
+    margin-bottom: 105px;
+  }
+
+  &__member {
+    &-personal {
+      &-name {
+        margin-bottom: 8px;
+        font-weight: 600;
+        line-height: 150%;
+        color: var(--neutral-color-100);
+      }
+
+      &-role {
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--neutral-color-150);
+      }
+    }
+
+    &-social {
+      display: flex;
+      gap: 8px;
+    }
+
+    &-info {
+      @include flex-justify-between;
+      padding-top: 16px;
+      max-width: 379px;
+    }
+  }
+
+  &__footer {
+    @include flex-all-between;
+    gap: 75px;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+
+    &-title {
+      max-width: 600px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-descr {
+      @include mini-desktop {
+        max-width: 415px;
+      }
+      max-width: 506px;
+      font-weight: 500;
+      line-height: 178%;
+      color: #7e8492;
+
+      &-link {
+        display: block;
+        padding: 10px 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--neutral-color-100);
+        transform: translateY(24px);
+      }
+    }
+  }
+}
