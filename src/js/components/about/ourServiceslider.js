@@ -21,7 +21,7 @@ export const useOurServiceSlider = () => {
         slidesPerView: "1.5",
         speed: 4000,
       },
-      380: {
+      330: {
         centeredSlides: false,
         slidesPerView: "1",
         speed: 3500,

@@ -19,7 +19,7 @@ export const useTeamBlockSlider = () => {
       576: {
         slidesPerView: "1.5",
       },
-      380: {
+      330: {
         centeredSlides: false,
         slidesPerView: "1.2",
       },
