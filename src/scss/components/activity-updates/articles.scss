@@ -1,0 +1,115 @@
+.articles {
+  padding: 160px 0;
+
+  @include small-mobile {
+    padding: 95px 0;
+  }
+
+  &__head {
+    @include flex-all-between;
+    gap: 30px;
+    margin-bottom: 80px;
+
+    @include small-mobile {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      max-width: 430px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+
+    &-btns {
+      @include flex-align-center;
+      gap: 16px;
+      justify-content: flex-end;
+
+      @include mini-desktop {
+        transform: translateY(5px);
+      }
+
+      @include small-mobile {
+        display: none;
+      }
+    }
+
+    &-btn {
+      @include flex-all-center;
+      border: 1px solid var(--neutral-color-40);
+      border-radius: 50%;
+      padding: 16px;
+      width: 50px;
+      height: 50px;
+      transition:
+        background-color var(--transition),
+        border-color var(--transition);
+
+      @include small-mobile {
+        width: 40px;
+        height: 40px;
+      }
+
+      & svg path {
+        transition: fill var(--transition);
+      }
+
+      &:hover {
+        border-color: var(--neutral-color-100);
+        background-color: var(--neutral-color-100);
+
+        & svg path {
+          fill: var(--neutral-color-10);
+        }
+      }
+
+      &--next {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__slide {
+    &-img {
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 131%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+
+    &-btn {
+      display: inline-block;
+      border: 1px solid #ced1d8;
+      padding: 16px 46px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+    }
+
+    &-content {
+      max-width: 406px;
+    }
+  }
+}

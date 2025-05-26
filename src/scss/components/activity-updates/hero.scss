@@ -1,0 +1,120 @@
+.hero {
+  padding: 95px 0 168px;
+
+  @include mobile {
+    padding: 40px 0 68px;
+    text-align: center;
+  }
+
+  @include small-tablet {
+    padding: 95px 0 75px;
+  }
+
+  &__title {
+    margin-bottom: 53px;
+  }
+
+  &__descr {
+    @include small-tablet {
+      margin-bottom: 75px;
+    }
+    margin-bottom: 128px;
+    max-width: 715px;
+
+    &::before {
+      width: 33%;
+      transform: translateY(-43px);
+    }
+  }
+
+  &__controls {
+    @include small-tablet {
+      display: none;
+    }
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+    &-btn {
+      padding: 10px 14px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+      opacity: 0.5;
+      transition: var(--transition);
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &--active {
+        font-weight: 600;
+        line-height: 150%;
+        text-decoration: underline;
+        color: var(--neutral-color-100);
+        opacity: 1;
+        text-decoration-skip-ink: none;
+      }
+    }
+
+    &-select {
+      @include small-tablet {
+        display: block;
+      }
+      display: none;
+      margin-bottom: 45px;
+      border-radius: 10px;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  &__slide {
+    text-align: start;
+
+    img {
+      border-radius: 10px;
+      max-height: 428px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &__article {
+    &-head {
+      @include small-mobile {
+        flex-direction: column;
+        align-items: start
+      }
+
+      @include flex-all-between;
+      margin-bottom: 24px;
+      padding-top: 16px;
+      max-width: 515px;
+      font-weight: 400;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+    }
+
+    &-author {
+      font-style: normal;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 700;
+      line-height: 125%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      max-width: 322px;
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--neutral-color-150);
+    }
+  }
+}

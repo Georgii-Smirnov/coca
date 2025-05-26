@@ -1,0 +1,40 @@
+.post-type {
+  padding: 120px 0;
+  background: var(--black-bg-color);
+
+  &__list {
+    @include mobile {
+      gap: 55px;
+      grid-template: auto / 1fr;
+    }
+    display: grid;
+    gap: 0 32px;
+    grid-template: auto / 1fr 1fr;
+  }
+
+  &__item {
+    &:nth-child(3) {
+      align-self: end;
+    }
+
+    &-img {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    color: #fff;
+
+    &--underline {
+      text-decoration: underline;
+    }
+  }
+
+  &__descr {
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+}
