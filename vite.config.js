@@ -20,6 +20,7 @@ export default defineConfig({
         contact: "./src/contact.html",
         about: "./src/about.html",
         updates: "./src/activity-updates.html",
+        singlePost: "./src/single-post.html",
       },
     },
   },
